@@ -3,10 +3,14 @@ export class BusinessOwner {
     password: string;
     storeName: string;
     location: string;
+    insidePeople: number;
+    waitTime: number;
     constructor() {
-        this.username='';
-        this.password='';
-        this.storeName='';
-        this.location='';
+        this.username = '';
+        this.password = '';
+        this.storeName = '';
+        this.location = '';
+        this.insidePeople = 0;
+        this.waitTime = 0;
     }
 }
