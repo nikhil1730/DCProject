@@ -1,0 +1,91 @@
+<div *ngIf="!guest && !business" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+<div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem; padding:20px">
+
+  <form *ngIf="login && !register">
+  
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <button (click)="loginOwner()" style="width:100%" class="btn btn-primary">Login</button>
+    </div>
+    <div class="form-group">
+      <button (click)="register=true;guest=false;login=false" type="button" class="btn btn-link">Register</button>
+    </div>
+
+    <div class="form-group">
+      <input type="number" class="form-control" [(ngModel)]="peopleInside" name="peopleInside" (change)="updateDB()">
+      <h1 (change)="updateDB()"> {{peopleInside*2}} </h1>
+    </div>
+
+  </form>
+  
+<form *ngIf="!login && register">
+  
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="storeName">Store Name</label>
+    <input type="text" class="form-control" id="storeName" name="storeName" [(ngModel)]="storeName" placeholder="StoreName">
+  </div>
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input type="location" class="form-control" id="location" name="location" [(ngModel)]="location" placeholder="Location">
+  </div>
+  <div class="form-group">
+    <button (click)="registerOwner()" style="width:100%" class="btn btn-primary">Register</button>
+  </div>
+  <div class="form-group">
+    <button (click)="guest=true;login=false;register=false;" type="button" class="btn btn-link">Continue as Guest</button>
+  </div>
+  <button (click)="guest=false;login=true;register=false;" type="button" class="btn btn-link">Already have account?</button>
+</form>
+</div>
+</div>
+
+<div *ngIf="guest && !login && !register" class="container justify-content">
+  <table class="table">
+  <tbody>
+    <tr style="font-weight:200">
+      <th>Store Name</th>
+      <th>Location</th>
+      <th>People Inside</th>
+      <th>Avg Wait Time</th>
+      <th>Rating</th>
+    </tr>
+    <tr *ngFor="let order of allowners; trackBy: index">
+       <td>{{ order.payload.doc.data().storeName }}</td>
+       <td>{{ order.payload.doc.data().location }}</td>
+       <!-- <td>{{ order.payload.doc.data().peopleInside }}</td> -->
+       <td>15</td>
+       <td>35 Mins</td>
+       <td>5</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button (click)="guest=false;login=true;register=false;" type="button" class="btn btn-link">Login for Business owners</button>
+</div>
+
+<div *ngIf="business" class="card" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+  <h1 style="padding-bottom: 50px;" >Business Owner Login</h1>
+  <div class="form-group">
+    <input type="number" class="form-control" [(ngModel)]="peopleInside" name="peopleInside" (change)="updateDB()">
+    <h1 (change)="updateDB()"> {{peopleInside*2}} </h1>
+  </div>
+  <div class="form-group">
+    <button (click)="guest=false;login=true;register=false;business=false" type="button" class="btn btn-secondary">Logout</button>
+  </div>
+
+</div>
