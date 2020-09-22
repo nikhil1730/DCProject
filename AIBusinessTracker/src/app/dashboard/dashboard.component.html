@@ -1,0 +1,21 @@
+
+<div class="container justify-content">
+    <table class="table">
+      <tbody>
+        <tr style="font-weight:200">
+          <th>Business Owner</th>
+          <th>Store Name</th>
+          <th>Location</th>
+          <th>People Inside</th>
+          <th>Avg Wait Time</th>
+        </tr>
+        <tr *ngFor="let order of owner.allBusinessOwners; trackBy: index">
+          <td>{{ order.payload.doc.data().username }}</td>
+          <td>{{ order.payload.doc.data().storeName }}</td>
+          <td>{{ order.payload.doc.data().location }}</td>
+          <td>{{ order.payload.doc.data().insidePeople }}</td>
+          <td>{{ order.payload.doc.data().insidePeople * order.payload.doc.data().waitTime}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

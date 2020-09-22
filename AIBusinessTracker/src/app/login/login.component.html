@@ -1,0 +1,23 @@
+<div style="display: flex;justify-content: center;align-items: center;">
+  <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem; padding:20px">
+    <div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password"
+          placeholder="Password">
+      </div>
+      <div class="form-group">
+        <button (click)="loginOwner()" style="width:100%" class="btn btn-primary">Login</button>
+      </div>
+      <!-- <div class="form-group text-center">
+        <button (click)="routeToRegister()" type="button" class="btn btn-link">Register</button>
+        <a class="nav-link" routerLinkActive="active" routerLink="/registration">Registration</a>
+      </div> -->
+      <h6 class="text-center">{{message}}</h6>
+    </div>
+  </div>
+</div>

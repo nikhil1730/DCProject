@@ -1,0 +1,33 @@
+<div style="display: flex;justify-content: center;align-items: center;">
+    <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem; padding:20px">
+        <div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password"
+                    placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="storeName">Store Name</label>
+                <input type="text" class="form-control" id="storeName" name="storeName" [(ngModel)]="storeName"
+                    placeholder="StoreName">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="location" class="form-control" id="location" name="location" [(ngModel)]="location"
+                    placeholder="Location">
+            </div>
+            <div class="form-group">
+                <button (click)="registerOwner()" style="width:100%" class="btn btn-primary">Register</button>
+            </div>
+            <div class="form-group">
+                <a class="nav-link text-center" routerLinkActive="active" routerLink="/dashboard">Continue as Guest</a>
+            </div>
+            <a class="nav-link text-center" routerLinkActive="active" routerLink="/login">Already have account?</a>
+            <h6>{{message}}</h6>
+        </div>
+    </div>
+</div>
