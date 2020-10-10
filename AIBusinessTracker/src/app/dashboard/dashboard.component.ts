@@ -28,12 +28,16 @@ export class DashboardComponent implements OnInit {
   }
 
   SearchFun() {
-    console.log('Hi there!');
-    console.log(this.searchText)
-    if(this.searchText != ""){
+    console.log(this.searchText);
+    if((this.searchText != "") && (typeof this.searchText !== "number")){
+      console.log(this.owner.allBusinessOwners);
       this.owner.allBusinessOwners = this.owner.allBusinessOwners.filter(res=>{
-      console.log(res.payload.doc.data().username.match(this.searchText));
-      return res.payload.doc.data().username.match(this.searchText);});
+      /*console.log(res.payload.doc.data().username.match(this.searchText));*/
+      return (res.payload.doc.data().username.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
+      res.payload.doc.data().storeName.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
+      res.payload.doc.data().location.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
+      res.payload.doc.data().insidePeople.toString().includes(this.searchText) ||
+      (parseInt(res.payload.doc.data().insidePeople) * parseInt(res.payload.doc.data().waitTime)).toString().includes(this.searchText));});
     }
     else if(this.searchText == ""){
       this.getOwners();
