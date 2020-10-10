@@ -1,4 +1,4 @@
-<input type="text" id="searchBar" onkeyup="searchFun()" placeholder="Search items..." title="Type in a name">
+<input type="search" [(ngModel)]="searchText" id="searchBar" (input)="SearchFun()" placeholder="Search items..." title="Search data items..."/>
 
 <div class="container justify-content">
     <table class="table">
