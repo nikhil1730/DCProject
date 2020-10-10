@@ -28,11 +28,8 @@ export class DashboardComponent implements OnInit {
   }
 
   SearchFun() {
-    console.log(this.searchText);
-    if((this.searchText != "") && (typeof this.searchText !== "number")){
-      console.log(this.owner.allBusinessOwners);
+    if(this.searchText != ""){
       this.owner.allBusinessOwners = this.owner.allBusinessOwners.filter(res=>{
-      /*console.log(res.payload.doc.data().username.match(this.searchText));*/
       return (res.payload.doc.data().username.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
       res.payload.doc.data().storeName.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
       res.payload.doc.data().location.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
