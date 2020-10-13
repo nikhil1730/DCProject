@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
       res.payload.doc.data().insidePeople.toString().includes(this.searchText) ||
       (parseInt(res.payload.doc.data().insidePeople) * parseInt(res.payload.doc.data().waitTime)).toString().includes(this.searchText));});});
     }
-    else if(this.searchText == ""){
+    else{
       this.getOwners();
     }
   }
