@@ -8,10 +8,12 @@ import { OwnerService } from '../services/owner.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  searchText: string;
 
   constructor(private router: Router, private owner: OwnerService) { }
 
   ngOnInit() {
+    console.log('ngOnInit()')
     if(this.owner.allBusinessOwners === undefined) {
       this.getOwners();
     } else {
@@ -25,4 +27,21 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  SearchFun() {
+    if(this.searchText != ""){
+      this.owner.allBusinessOwners = this.owner.getAllOwners().subscribe(res=> { this.owner.allBusinessOwners = res.filter(res=>{
+      return (res.payload.doc.data().username.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
+      res.payload.doc.data().storeName.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
+      res.payload.doc.data().location.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
+      res.payload.doc.data().insidePeople.toString().includes(this.searchText) ||
+      (parseInt(res.payload.doc.data().insidePeople) * parseInt(res.payload.doc.data().waitTime)).toString().includes(this.searchText));});});
+    }
+    else{
+      this.getOwners();
+    }
+  }
 }
+
+
+
+
