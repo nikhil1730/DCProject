@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBveTeE7sj8lR40eBFyjI-kZwDkiEGdbFY",
-    authDomain: "waittimetracker.firebaseapp.com",
-    databaseURL: "https://waittimetracker.firebaseio.com",
-    projectId: "waittimetracker",
-    storageBucket: "waittimetracker.appspot.com",
-    messagingSenderId: "848536132402",
-    appId: "1:848536132402:web:f8d1e0c90bc34a0cdb152b",
-    measurementId: "G-66W84C9LKL"
+    apiKey: "AIzaSyCAmUWnzCpU-hdqX8u2T5ejryC8zXx2feM",
+    authDomain: "object-detection-2b8a7.firebaseapp.com",
+    databaseURL: "https://object-detection-2b8a7.firebaseio.com",
+    projectId: "object-detection-2b8a7",
+    storageBucket: "object-detection-2b8a7.appspot.com",
+    messagingSenderId: "110462653621",
+    appId: "1:110462653621:web:df5f6d5a15a99ee04c5afc",
+    measurementId: "G-RH69T881GX"
   }
 };
 
