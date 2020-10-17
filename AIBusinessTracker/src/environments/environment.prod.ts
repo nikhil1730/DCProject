@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyC4Y2uIdQjbWS6BqN0Q-Pf95tfK8ZuMDKM",
-    authDomain: "object-detection-a3596.firebaseapp.com",
-    databaseURL: "https://object-detection-a3596.firebaseio.com",
-    projectId: "object-detection-a3596",
-    storageBucket: "object-detection-a3596.appspot.com",
-    messagingSenderId: "739446776852",
-    appId: "1:739446776852:web:8957966339b0cae898f301",
-    measurementId: "G-KW573C6VWB"
+    apiKey: "AIzaSyCAmUWnzCpU-hdqX8u2T5ejryC8zXx2feM",
+    authDomain: "object-detection-2b8a7.firebaseapp.com",
+    databaseURL: "https://object-detection-2b8a7.firebaseio.com",
+    projectId: "object-detection-2b8a7",
+    storageBucket: "object-detection-2b8a7.appspot.com",
+    messagingSenderId: "110462653621",
+    appId: "1:110462653621:web:df5f6d5a15a99ee04c5afc",
+    measurementId: "G-RH69T881GX"
   }
 };
