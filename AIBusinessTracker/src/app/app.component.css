@@ -1,3 +1,12 @@
 .table .th {
     font-weight: 200;
 }
+
+ul li:hover{
+  box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+}
+
+/*#textIntro {
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;
+    color: white;
+}*/
