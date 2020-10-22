@@ -14,6 +14,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { BusinessComponent } from './business/business.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import {MatCardModule} from '@angular/material/card';
+// import {MatButtonModule} from '@angular/material/button';
+// import {MatIconModule} from '@angular/material/icon';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -34,6 +38,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

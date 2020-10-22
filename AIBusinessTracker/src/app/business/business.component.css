@@ -1,0 +1,30 @@
+.centerContainer {
+    width: 100%;
+    height: 100vh;
+   
+  }
+  
+  #myVideo {
+   
+    object-fit: cover;
+  }
+  
+  .videoCard {
+    height: 100vh;
+  }
+  
+  #myCanvas {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+  }
+  
+  ::ng-deep .mat-card.objectCard, .classifyCard {
+    width: 100%;
+    height: 100% !important;
+  }
+  
+  ::ng-deep .mat-card.videoCard {
+    padding: 0 !important;
+  }
+  

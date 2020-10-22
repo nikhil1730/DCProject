@@ -8,7 +8,7 @@
           <th>Store Name</th>
           <th>Location</th>
           <th>People Inside</th>
-          <th>Avg Wait Time</th>
+          <th>Total Wait Time</th>
         </tr>
         <tr *ngFor="let order of owner.allBusinessOwners; trackBy: index">
           <td>{{ order.payload.doc.data().username }}</td>
