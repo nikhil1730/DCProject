@@ -1,24 +1,28 @@
-<div class="card" style="display: flex;justify-content: center;align-items: center;">
-    <h1 style="padding-bottom: 50px;">Business Owner Page</h1>
-    <div class=row>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label style="height:50px" for="waitTime">Average Wait Time Per Person</label>
-          <input type="number" class="form-control" [(ngModel)]="waitTime" (change)="updateDB()" name="waitTime">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label style="height:50px" for="peopleInside">People Inside the Store</label>
-          <input type="number" class="form-control" [(ngModel)]="peopleInside" (change)="updateDB()" name="peopleInside">
-        </div>
-      </div>
-    </div>
+
+  <div style="padding:20px" class="centerContainer">
     <div class="row">
-      <h1> {{peopleInside*waitTime}} </h1>
+      <div class="form-group col-sm-6">
+        <label for="waitTime">Please Enter the Average wait time</label>
+        <input type="text" class="form-control" id="waitTime" name="waitTime" (change)="updateDB()" [(ngModel)]="waitTime" placeholder="Wait Time">
+      </div>
+      <div class="col-sm-6">
+      <h1>People Inside the store: {{insidePeople}}</h1>
+    </div>
+      </div>
+<div class="row">
+      <div class="col-sm-6">
+        <div class="videoCard mat-elevation-z9">
+          <video id="myVideo" poster="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"></video>
+          <canvas id="myCanvas"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1>Total waitTime for the store is: {{insidePeople*waitTime}} Mins</h1>
+      </div>
     </div>
     <div class="form-group">
       <button (click)="logout()" type="button"
         class="btn btn-secondary">Logout</button>
     </div>
-  </div>
+
+</div>

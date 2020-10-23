@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/AIBusinessTracker",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",

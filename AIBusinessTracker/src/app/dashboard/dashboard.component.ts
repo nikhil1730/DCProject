@@ -10,10 +10,10 @@ import { OwnerService } from '../services/owner.service';
 export class DashboardComponent implements OnInit {
   searchText: string;
 
-  constructor(private router: Router, private owner: OwnerService) { }
+  constructor(private router: Router, public owner: OwnerService) { }
 
   ngOnInit() {
-    console.log('ngOnInit()')
+    // console.log('ngOnInit()')
     if(this.owner.allBusinessOwners === undefined) {
       this.getOwners();
     } else {
