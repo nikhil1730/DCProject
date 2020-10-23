@@ -24,10 +24,10 @@
                 <button (click)="registerOwner()" style="width:100%" class="btn btn-primary">Register</button>
             </div>
             <div class="form-group">
-                <a class="nav-link text-center" routerLinkActive="active" routerLink="/dashboard">Continue as Guest</a>
+                <a id="ContinueAsGuest" style="width:70%; position: relative; left:15%;"class="nav-link text-center" routerLinkActive="active" routerLink="/dashboard">Continue as Guest</a>
             </div>
-            <a class="nav-link text-center" routerLinkActive="active" routerLink="/login">Already have account?</a>
-            <h6>{{message}}</h6>
+            <a id="AlreadyHaveAccount" style="width:70%; position: relative; left:15%;" class="nav-link text-center" routerLinkActive="active" routerLink="/login">Already have account?</a>
+            <h6 id="ErrorMessage">{{message}}</h6>
         </div>
     </div>
 </div>

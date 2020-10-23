@@ -38,3 +38,15 @@ tr:hover {background-color: #ffcc99;}
   font-size: 18px;
   background-color: orange;
 }
+
+@media screen and (max-width: 800px) {
+  #searchBar {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 801px){
+  #searchBar {
+    width: 40%;
+  }
+}
