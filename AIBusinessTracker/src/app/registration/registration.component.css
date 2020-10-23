@@ -1,0 +1,8 @@
+#ContinueAsGuest:hover, #AlreadyHaveAccount:hover{
+  box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+  background-color: rgb(124, 252, 0, 0.3);
+}
+
+#ErrorMessage{
+  color:red;
+}

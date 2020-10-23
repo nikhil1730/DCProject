@@ -13,11 +13,11 @@
       <div class="form-group">
         <button (click)="loginOwner()" style="width:100%" class="btn btn-primary">Login</button>
       </div>
-      <!-- <div class="form-group text-center">
-        <button (click)="routeToRegister()" type="button" class="btn btn-link">Register</button>
-        <a class="nav-link" routerLinkActive="active" routerLink="/registration">Registration</a>
-      </div> -->
-      <h6 class="text-center">{{message}}</h6>
+      <div class="form-group text-center">
+        <!--<button (click)="routeToRegister()" type="button" class="btn btn-link">Register</button>-->
+        <a id="SignUp" style="width:50%; position: relative; left:25%;" class="nav-link" routerLinkActive="active" routerLink="/registration">Sign Up</a>
+      </div>
+      <h6 id="ErrorMessage" class="text-center">{{message}}</h6>
     </div>
   </div>
 </div>
