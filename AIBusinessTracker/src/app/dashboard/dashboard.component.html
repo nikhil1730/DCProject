@@ -10,7 +10,7 @@
           <th>People Inside</th>
           <th>Total Wait Time</th>
         </tr>
-        <tr *ngFor="let order of owner.allBusinessOwners; trackBy: index">
+        <tr *ngFor="let order of owner.allBusinessOwners">
           <td>{{ order.payload.doc.data().username }}</td>
           <td>{{ order.payload.doc.data().storeName }}</td>
           <td>{{ order.payload.doc.data().location }}</td>
