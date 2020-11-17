@@ -1,31 +1,33 @@
 <div style="padding:20px" class="centerContainer">
   <div class="row">
     <div class="form-group col-sm-3">
-      <label for="waitTime">Average Wait time</label>
+      <label id="label" for="waitTime">Average Wait time</label>
       <input type="text" class="form-control" id="waitTime" name="waitTime" (change)="updateDB()" [(ngModel)]="waitTime"
         placeholder="Wait Time">
     </div>
     <div class="form-group col-sm-3">
-      <label for="maxCapacity">Maximum Capacity</label>
+      <label id="label" for="maxCapacity">Maximum Capacity</label>
       <input type="text" class="form-control" id="maxCapacity" name="maxCapacity" (change)="updateDB()"
         [(ngModel)]="maxCapacity" placeholder="Maximum Capacity">
     </div>
     <div class="form-group col-sm-3">
-      <label for="webIn">Web Check-In</label>
+      <label id="label" for="webIn">Web Check-In</label>
       <input type="text" class="form-control" id="webIn" name="webIn" [disabled]="enableWebIn" (change)="updateDB()"
         [(ngModel)]="webIn" placeholder="Web Check-In">
     </div>
     <div class="alignCenter col-sm-3">
       <button (click)="exitUpdate()" type="button" class="btn btn-secondary">Manual Exit</button> </div>
   </div>
+  <br/>
   <div class="row">
     <div class="col-sm-6">
-      <h1>People Inside the store: {{insidePeople}}</h1>
+      <h3 id="label">People Inside the store: {{insidePeople}}</h3>
     </div>
     <div class="col-md-6">
-      <h1>Total waitTime is: {{totalTime}} Mins</h1>
+      <h3 id="label">Total waitTime is: {{totalTime}} Mins</h3>
     </div>
   </div>
+  <br/>
   <div class="row">
     <div class="videoCard mat-elevation-z9">
       <video id="myVideo" poster="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"></video>
