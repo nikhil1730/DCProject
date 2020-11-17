@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src ='assets/logo.png' alt = "logo" style="width:40px;">AI Business Tracker</a>
+    <a class="navbar-brand" href="#"><img src='assets/logo.png' alt="logo" style="width:40px;">AI Business Tracker</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
@@ -20,120 +20,13 @@
     </ul>
   </div>
 </nav>
-<h1 id="textIntro" style="display: flex;justify-content: center;align-items: center;padding: 20px;">Welcome to AI Business Wait Time Assist</h1>
+<div class="textIntro">Welcome to AI Business Wait Time Assist</div>
+
+<div style="float: right;padding: 20px;" *ngIf="router.url === '/business'">
+  <button (click)="logout()" type="button" class="btn btn-primary">Logout</button>
+</div>
+
+
 <div class="container">
   <router-outlet></router-outlet>
 </div>
-
-
-<!-- <div *ngIf="!guest && !business" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
-  <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem; padding:20px">
-
-    <div *ngIf="login && !register">
-
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password"
-          placeholder="Password">
-      </div>
-      <div class="form-group">
-        <button (click)="loginOwner()" style="width:100%" class="btn btn-primary">Login</button>
-      </div>
-      <div class="form-group">
-        <button (click)="register=true;guest=false;login=false" type="button" class="btn btn-link">Register</button>
-      </div>
-      <h6>{{message}}</h6>
-
-      <div class="form-group">
-        <button (click)="guest=true;login=false;register=false;" type="button" class="btn btn-link">Continue as
-          Guest</button>
-      </div>
-    </div>
-
-    <div *ngIf="!login && register">
-
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password"
-          placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label for="storeName">Store Name</label>
-        <input type="text" class="form-control" id="storeName" name="storeName" [(ngModel)]="storeName"
-          placeholder="StoreName">
-      </div>
-      <div class="form-group">
-        <label for="location">Location</label>
-        <input type="location" class="form-control" id="location" name="location" [(ngModel)]="location"
-          placeholder="Location">
-      </div>
-      <div class="form-group">
-        <button (click)="registerOwner()" style="width:100%" class="btn btn-primary">Register</button>
-      </div>
-      <div class="form-group">
-        <button (click)="guest=true;login=false;register=false;" type="button" class="btn btn-link">Continue as
-          Guest</button>
-      </div>
-      <button (click)="guest=false;login=true;register=false;" type="button" class="btn btn-link">Already have
-        account?</button>
-        <h6>{{message}}</h6>
-    </div>
-  </div>
-</div>
-
-<div *ngIf="guest && !login && !register" class="container justify-content">
-  <table class="table">
-    <tbody>
-      <tr style="font-weight:200">
-        <th>Business Owner</th>
-        <th>Store Name</th>
-        <th>Location</th>
-        <th>People Inside</th>
-        <th>Avg Wait Time</th>
-      </tr>
-      <tr *ngFor="let order of allowners; trackBy: index">
-        <td>{{ order.payload.doc.data().username }}</td>
-        <td>{{ order.payload.doc.data().storeName }}</td>
-        <td>{{ order.payload.doc.data().location }}</td>
-        <td>{{ order.payload.doc.data().insidePeople }}</td>
-        <td>{{ order.payload.doc.data().insidePeople * order.payload.doc.data().waitTime}}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <button (click)="guest=false;login=true;register=false;" type="button" class="btn btn-link">Login for Business
-    owners</button>
-</div>
-
-<div *ngIf="business" class="card" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
-  <h1 style="padding-bottom: 50px;">Business Owner Page</h1>
-  <div class=row>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label style="height:50px" for="waitTime">Average Wait Time Per Person</label>
-        <input type="number" class="form-control" [(ngModel)]="waitTime" (change)="updateDB()" name="waitTime">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label style="height:50px" for="peopleInside">People Inside the Store</label>
-        <input type="number" class="form-control" [(ngModel)]="peopleInside" (change)="updateDB()" name="peopleInside">
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <h1> {{peopleInside*waitTime}} </h1>
-  </div>
-  <div class="form-group">
-    <button (click)="guest=false;login=true;register=false;business=false" type="button"
-      class="btn btn-secondary">Logout</button>
-  </div>
-</div> -->

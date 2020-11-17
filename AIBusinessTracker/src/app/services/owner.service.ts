@@ -29,7 +29,6 @@ export class OwnerService {
 
   updateInsidePeople(docId, people) {
     this.firebase.collection('BusinessOwners').doc(docId).set(people).then(res => {
-      console.log('Data updated successfully');
     }).catch(err => {
       console.log('Error while updating DB' + err);
     });

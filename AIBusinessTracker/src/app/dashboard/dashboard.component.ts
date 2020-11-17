@@ -13,7 +13,6 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router, public owner: OwnerService) { }
 
   ngOnInit() {
-    // console.log('ngOnInit()')
     if(this.owner.allBusinessOwners === undefined) {
       this.getOwners();
     } else {
