@@ -7,13 +7,13 @@ ul li:hover{
 }
 
 .textIntro {
-    text-shadow: 1px 1px 2px black, 0 0 0.5em white, 0 0 0.2em black;
+    text-shadow: 1px 1px 2px black, 0 0 0.17em blue, 0 0 0.17em black;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    font-size: x-large;
+    font-size: 35px;
     font-weight: 500;
 }
 

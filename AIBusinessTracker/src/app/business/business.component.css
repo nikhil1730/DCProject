@@ -20,7 +20,7 @@
   
   #myCanvas {
     position: absolute;
-    top: 120px;
+    top: 350px;
     left: 120px;
   }
   
@@ -32,4 +32,8 @@
   ::ng-deep .mat-card.videoCard {
     padding: 0 !important;
   }
-  
+
+  #label{
+    text-shadow: 1px 1px 2px black, 0 0 0.17em blue, 0 0 0.17em black;
+    color: white;
+  }
