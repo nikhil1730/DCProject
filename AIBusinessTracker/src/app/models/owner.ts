@@ -5,6 +5,9 @@ export class BusinessOwner {
     location: string;
     insidePeople: number;
     waitTime: number;
+    webIn: number;
+    maxCapacity: number;
+    totalTime: number;
     constructor() {
         this.username = '';
         this.password = '';
@@ -12,5 +15,8 @@ export class BusinessOwner {
         this.location = '';
         this.insidePeople = 0;
         this.waitTime = 0;
+        this.webIn = 0;
+        this.maxCapacity = 1;
+        this.totalTime = 0;
     }
 }

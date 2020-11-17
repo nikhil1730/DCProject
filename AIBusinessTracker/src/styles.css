@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-body  {
+
+.bg-image {
   background-image: url('./app/images/backgroundImage.png');
-  background-size: auto;
-  background-size:cover;
+  backdrop-filter: blur(1.5px);
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
