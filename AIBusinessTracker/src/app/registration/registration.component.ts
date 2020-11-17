@@ -28,6 +28,9 @@ export class RegistrationComponent implements OnInit {
     owner['location'] = this.location;
     owner['insidePeople'] = 0;
     owner['waitTime'] = 0;
+    owner['totalTime'] = 0;
+    owner['webIn'] = 0;
+    owner['maxCapacity'] = 1;
     this.message = this.owner.createOwner(owner);
     this.username = '';
     this.password = '';
