@@ -1,22 +1,22 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ContactusComponent } from './contactus.component';
+import { ContactUsComponent } from './contactus.component';
 
 describe('a contactus component', () => {
-	let component: ContactusComponent;
+	let component: ContactUsComponent;
 
 	// register all needed dependencies
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			providers: [
-				ContactusComponent
+				ContactUsComponent
 			]
 		});
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([ContactusComponent], (ContactusComponent) => {
-		component = ContactusComponent;
+	beforeEach(inject([ContactUsComponent], (ContactUsComponent) => {
+		component = ContactUsComponent;
 	}));
 
 	it('should have an instance', () => {
