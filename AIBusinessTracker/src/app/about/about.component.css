@@ -1,3 +1,37 @@
-.about {
+#header, #context{
+  /*text-shadow: 1px 1px 2px black, 0 0 0.0125em blue, 0 0 0.0125em black;*/
+  color: Tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 00px;
+  font-size: 24px;
+}
+#context{
+  font-size: 16px;
+  color: gray;
+  font-weight:normal;
+}
+#mainDiv{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#box{
+  width: 40rem;
+  /*padding:0px;
+  border:5px double blue;
+  outline: 5px solid black;
+  outline-width:1px;*/
+  box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+  background-color:white;
+}
 
+@media screen and (max-width: 800px) {
+  #context {
+    font-size: 13px;
+  }
+  #header{
+    font-size: 18px;
+  }
 }
