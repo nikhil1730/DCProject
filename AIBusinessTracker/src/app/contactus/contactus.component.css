@@ -1,9 +1,6 @@
-.contactus {
-}
-
 #myContactText, #email{
   text-shadow: 1px 1px 2px black, 0 0 0.0125em blue, 0 0 0.0125em black;
-  color: springgreen;
+  color: Tomato;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +9,7 @@
 }
 #email{
   font-size: 25px;
-  color: Tomato;
+  color: gray;
   font-weight:normal;
 }
 #mainDiv{
