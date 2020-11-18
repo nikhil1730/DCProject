@@ -26,3 +26,8 @@ filter: blur(5px);
 position:fixed;
 }
 
+@media screen and (max-width: 800px) {
+  .textIntro {
+    font-size: 25px;
+  }
+}
