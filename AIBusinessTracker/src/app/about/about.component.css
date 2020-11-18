@@ -24,7 +24,7 @@
   outline: 5px solid black;
   outline-width:1px;*/
   box-shadow: 0 0 6px rgba(35, 173, 278, 1);
-  background-color:lightyellow;
+  background-color:white;
 }
 
 @media screen and (max-width: 800px) {
