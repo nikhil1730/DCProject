@@ -33,7 +33,9 @@ export class DashboardComponent implements OnInit {
       res.payload.doc.data().storeName.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
       res.payload.doc.data().location.toLocaleLowerCase().includes(this.searchText.toLocaleLowerCase()) ||
       res.payload.doc.data().insidePeople.toString().includes(this.searchText) ||
-      (parseInt(res.payload.doc.data().insidePeople) * parseInt(res.payload.doc.data().waitTime)).toString().includes(this.searchText));});});
+      res.payload.doc.data().webIn.toString().includes(this.searchText) ||
+      res.payload.doc.data().totalTime.toString().includes(this.searchText)
+      /*(parseInt(res.payload.doc.data().insidePeople) * parseInt(res.payload.doc.data().waitTime)).toString().includes(this.searchText)*/);});});
     }
     else{
       this.getOwners();
