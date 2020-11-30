@@ -75,7 +75,7 @@ export class BusinessComponent implements OnInit {
 
   calculateTotalTime() {
     if (this.webIn > 0) {
-      this.totalTime = this.waitTime * this.webIn;
+      this.totalTime = this.waitTime * (this.webIn + 1); //To show the next person's wait time
     } else if (this.insidePeople == this.maxCapacity) {
       this.totalTime = this.waitTime;
     } else if (this.insidePeople < this.maxCapacity) {
